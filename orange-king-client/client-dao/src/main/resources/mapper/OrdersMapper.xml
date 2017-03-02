@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.orangeking.client.dao.mapper.OrdersMapper" >
+  <resultMap id="BaseResultMap" type="com.orangeking.client.dao.model.Orders" >
+    <!--
+      WARNING - @mbg.generated
+    -->
+    <constructor >
+      <idArg column="order_id" jdbcType="VARCHAR" javaType="java.lang.String" />
+      <arg column="user_id" jdbcType="VARCHAR" javaType="java.lang.String" />
+      <arg column="car_dealer_id" jdbcType="VARCHAR" javaType="java.lang.String" />
+      <arg column="loan_amount" jdbcType="DECIMAL" javaType="java.math.BigDecimal" />
+      <arg column="credit_amount" jdbcType="DECIMAL" javaType="java.math.BigDecimal" />
+      <arg column="loan_term" jdbcType="INTEGER" javaType="java.lang.Integer" />
+      <arg column="credit_term" jdbcType="INTEGER" javaType="java.lang.Integer" />
+      <arg column="vehicle_type" jdbcType="VARCHAR" javaType="java.lang.String" />
+      <arg column="transaction_price" jdbcType="DECIMAL" javaType="java.math.BigDecimal" />
+      <arg column="salesman_id" jdbcType="BIGINT" javaType="java.lang.Long" />
+      <arg column="status" jdbcType="TINYINT" javaType="java.lang.Byte" />
+      <arg column="refusal_reason" jdbcType="VARCHAR" javaType="java.lang.String" />
+      <arg column="repayment_date" jdbcType="INTEGER" javaType="java.lang.Integer" />
+      <arg column="settle_time" jdbcType="TIMESTAMP" javaType="java.util.Date" />
+      <arg column="apply_time" jdbcType="TIMESTAMP" javaType="java.util.Date" />
+      <arg column="created_at" jdbcType="TIMESTAMP" javaType="java.util.Date" />
+      <arg column="last_update" jdbcType="TIMESTAMP" javaType="java.util.Date" />
+    </constructor>
+  </resultMap>
+</mapper>

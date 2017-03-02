@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.orangeking.client.dao.mapper.SalesRegionMapper" >
+  <resultMap id="BaseResultMap" type="com.orangeking.client.dao.model.SalesRegion" >
+    <!--
+      WARNING - @mbg.generated
+    -->
+    <constructor >
+      <idArg column="id" jdbcType="BIGINT" javaType="java.lang.Long" />
+      <arg column="district_code" jdbcType="VARCHAR" javaType="java.lang.String" />
+      <arg column="describe" jdbcType="VARCHAR" javaType="java.lang.String" />
+      <arg column="district_type" jdbcType="VARCHAR" javaType="java.lang.String" />
+      <arg column="parent_id" jdbcType="VARCHAR" javaType="java.lang.String" />
+      <arg column="created_at" jdbcType="TIMESTAMP" javaType="java.util.Date" />
+      <arg column="last_update" jdbcType="TIMESTAMP" javaType="java.util.Date" />
+    </constructor>
+  </resultMap>
+</mapper>

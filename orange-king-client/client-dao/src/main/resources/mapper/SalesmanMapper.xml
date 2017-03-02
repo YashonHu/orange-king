@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.orangeking.client.dao.mapper.SalesmanMapper" >
+  <resultMap id="BaseResultMap" type="com.orangeking.client.dao.model.Salesman" >
+    <!--
+      WARNING - @mbg.generated
+    -->
+    <constructor >
+      <idArg column="salesman_id" jdbcType="BIGINT" javaType="java.lang.Long" />
+      <arg column="salesman_name" jdbcType="VARCHAR" javaType="java.lang.String" />
+      <arg column="weichat" jdbcType="VARCHAR" javaType="java.lang.String" />
+      <arg column="phone_number" jdbcType="VARCHAR" javaType="java.lang.String" />
+      <arg column="role" jdbcType="INTEGER" javaType="java.lang.Integer" />
+      <arg column="district" jdbcType="VARCHAR" javaType="java.lang.String" />
+      <arg column="status" jdbcType="TINYINT" javaType="java.lang.Byte" />
+      <arg column="parent_id" jdbcType="BIGINT" javaType="java.lang.Long" />
+      <arg column="created_at" jdbcType="TIMESTAMP" javaType="java.util.Date" />
+      <arg column="last_update" jdbcType="TIMESTAMP" javaType="java.util.Date" />
+    </constructor>
+  </resultMap>
+</mapper>

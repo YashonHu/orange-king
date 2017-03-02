@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.orangeking.client.dao.mapper.UsersMapper" >
+  <resultMap id="BaseResultMap" type="com.orangeking.client.dao.model.Users" >
+    <!--
+      WARNING - @mbg.generated
+    -->
+    <constructor >
+      <idArg column="user_id" jdbcType="VARCHAR" javaType="java.lang.String" />
+      <arg column="user_name" jdbcType="VARCHAR" javaType="java.lang.String" />
+      <arg column="sex" jdbcType="INTEGER" javaType="java.lang.Integer" />
+      <arg column="age" jdbcType="INTEGER" javaType="java.lang.Integer" />
+      <arg column="card_id" jdbcType="VARCHAR" javaType="java.lang.String" />
+      <arg column="phone_number" jdbcType="VARCHAR" javaType="java.lang.String" />
+      <arg column="service_pwd" jdbcType="VARCHAR" javaType="java.lang.String" />
+      <arg column="passwd" jdbcType="VARCHAR" javaType="java.lang.String" />
+      <arg column="micile_of_origin" jdbcType="VARCHAR" javaType="java.lang.String" />
+      <arg column="address" jdbcType="VARCHAR" javaType="java.lang.String" />
+      <arg column="work_type" jdbcType="TINYINT" javaType="java.lang.Byte" />
+      <arg column="marital_status" jdbcType="TINYINT" javaType="java.lang.Byte" />
+      <arg column="driving_license" jdbcType="TINYINT" javaType="java.lang.Byte" />
+      <arg column="is_has_car" jdbcType="TINYINT" javaType="java.lang.Byte" />
+      <arg column="plate_number" jdbcType="VARCHAR" javaType="java.lang.String" />
+      <arg column="account_holder" jdbcType="VARCHAR" javaType="java.lang.String" />
+      <arg column="account_bank" jdbcType="VARCHAR" javaType="java.lang.String" />
+      <arg column="account" jdbcType="VARCHAR" javaType="java.lang.String" />
+      <arg column="re_phone_number" jdbcType="VARCHAR" javaType="java.lang.String" />
+      <arg column="created_at" jdbcType="TIMESTAMP" javaType="java.util.Date" />
+      <arg column="last_update" jdbcType="TIMESTAMP" javaType="java.util.Date" />
+    </constructor>
+  </resultMap>
+</mapper>

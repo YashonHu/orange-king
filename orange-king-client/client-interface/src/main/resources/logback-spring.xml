@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+    <include resource="org/springframework/boot/logging/logback/base.xml" />
+    <logger name="org.springframework.web" level="INFO"/>
+
+    <!-- 测试环境+开发环境. 多个使用逗号隔开. -->
+    <springProfile name="test,dev">
+        <logger name="org.springframework.web" level="INFO"/>
+        <logger name="com.orangeking" level="INFO" />
+    </springProfile>
+
+
+    <!-- 生产环境. -->
+    <springProfile name="prod">
+        <logger name="org.springframework.web" level="INFO"/>
+        <logger name="com.orangeking" level="DEBUG" />
+    </springProfile>
+
+
+    <appender name="FILE-ERROR" class="ch.qos.logback.core.rolling.RollingFileAppender">
+        <!-- file property left unset/blank -->
+        <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+            <fileNamePattern>mylog.%d{yyyy-MM-dd}.log</fileNamePattern>
+        </rollingPolicy>
+
+        <encoder>
+            <pattern>%relative [%thread] %level %logger - %msg%n</pattern>
+        </encoder>
+    </appender>
+
+    <appender name="FILE-AOP" class="ch.qos.logback.core.rolling.RollingFileAppender">
+        <!-- file property left unset/blank -->
+        <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+            <fileNamePattern>aop.%d{yyyy-MM-dd}.log</fileNamePattern>
+        </rollingPolicy>
+
+        <encoder>
+            <pattern>%relative [%thread] %level %logger - %msg%n</pattern>
+        </encoder>
+    </appender>
+
+    <logger name="com.orangeking" level="ERROR" additivity="true">
+        <appender-ref ref="FILE-ERROR" />
+    </logger>
+    <logger name="com.orangeking.demo.monitor" level="INFO" additivity="false">
+        <appender-ref ref="FILE-AOP" />
+    </logger>
+
+    <root level="INFO">
+        <appender-ref ref="FILE" />
+        <appender-ref ref="CONSOLE" />
+    </root>
+
+</configuration>

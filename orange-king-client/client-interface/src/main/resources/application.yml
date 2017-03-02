@@ -1,0 +1,38 @@
+server:
+    port: 9090
+    context-path: #/orange/
+
+logging:
+    level:
+        tk.mybatis: TRACE
+
+druid:
+    url: jdbc:mysql://10.2.1.250:3306/orange_business_v2
+    username: root
+    password: Mysky@root123
+    initial-size: 1
+    min-idle: 1
+    max-active: 20
+    test-on-borrow: true
+    filters: stat,wall,log4j
+mybatis:
+    typeAliasesPackage: com.orangeking.client.dao.model
+    mapperLocations: classpath:mapper/*.xml
+
+mapper:
+    mappers:
+        - com.orangeking.client.dao.util.MyMapper
+    not-empty: false
+    identity: MYSQL
+
+pagehelper:
+    helperDialect: mysql
+    reasonable: true
+    supportMethodsArguments: true
+    params: count=countSql
+
+spring:
+    http:
+        multipart:
+            location: E:/
+            maxFileSize: 2MB

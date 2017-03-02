@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.orangeking.client.dao.mapper.UserBillMapper" >
+  <resultMap id="BaseResultMap" type="com.orangeking.client.dao.model.UserBill" >
+    <!--
+      WARNING - @mbg.generated
+    -->
+    <constructor >
+      <idArg column="bill_id" jdbcType="BIGINT" javaType="java.lang.Long" />
+      <arg column="order_id" jdbcType="VARCHAR" javaType="java.lang.String" />
+      <arg column="stage" jdbcType="INTEGER" javaType="java.lang.Integer" />
+      <arg column="total_stage" jdbcType="INTEGER" javaType="java.lang.Integer" />
+      <arg column="bill_capital" jdbcType="DECIMAL" javaType="java.math.BigDecimal" />
+      <arg column="bill_interest" jdbcType="DECIMAL" javaType="java.math.BigDecimal" />
+      <arg column="repay_capital" jdbcType="DECIMAL" javaType="java.math.BigDecimal" />
+      <arg column="repay_interest" jdbcType="DECIMAL" javaType="java.math.BigDecimal" />
+      <arg column="bill_total_amount" jdbcType="DECIMAL" javaType="java.math.BigDecimal" />
+      <arg column="repay_total_amount" jdbcType="DECIMAL" javaType="java.math.BigDecimal" />
+      <arg column="fee" jdbcType="DECIMAL" javaType="java.math.BigDecimal" />
+      <arg column="repay_serial" jdbcType="BIGINT" javaType="java.lang.Long" />
+      <arg column="late_fee" jdbcType="DECIMAL" javaType="java.math.BigDecimal" />
+      <arg column="status" jdbcType="TINYINT" javaType="java.lang.Byte" />
+      <arg column="repay_time" jdbcType="TIMESTAMP" javaType="java.util.Date" />
+      <arg column="created_at" jdbcType="TIMESTAMP" javaType="java.util.Date" />
+      <arg column="last_update" jdbcType="TIMESTAMP" javaType="java.util.Date" />
+    </constructor>
+  </resultMap>
+</mapper>
